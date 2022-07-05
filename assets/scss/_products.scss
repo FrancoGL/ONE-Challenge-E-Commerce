@@ -6,6 +6,18 @@
   grid-row: 2 / 3;
 }
 
+.products--two {
+  grid-area: consoles;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.products--three {
+  grid-area: various;
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+
 .products {
   padding: 0 1rem;
 
@@ -21,6 +33,7 @@
     }
 
     .header__link {
+      font-weight: 700;
       font-size: 0.875rem;
       text-decoration: none;
 

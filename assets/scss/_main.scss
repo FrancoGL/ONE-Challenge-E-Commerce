@@ -7,7 +7,7 @@
   display: grid;
   grid-template-areas: "banner", "starwars", "consoles", "various";
   grid-template-columns: auto;
-  grid-template-rows: 12rem repeat(3, 15.625rem);
+  grid-template-rows: 12rem repeat(3, auto);
   gap: 1rem;
 }
 
