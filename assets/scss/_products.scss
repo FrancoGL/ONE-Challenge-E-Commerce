@@ -1,0 +1,62 @@
+@use "variables";
+
+.products--one {
+  grid-area: starwars;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.products {
+  padding: 0 1rem;
+
+  .products__header {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header__title {
+      font-weight: 700;
+      font-size: 1.375rem;
+    }
+
+    .header__link {
+      font-size: 0.875rem;
+      text-decoration: none;
+
+      .header__arrow {
+        margin-left: 0.417rem;
+        width: 0.667rem;
+      }
+    }
+  }
+
+  .products__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    .card {
+      .card__body {
+        margin: 0.5rem 0;
+
+        .body__title {
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+          font-size: 0.875rem;
+        }
+
+        .body__price {
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+        }
+
+        .body__link {
+          font-weight: 700;
+          font-size: 0.875rem;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
