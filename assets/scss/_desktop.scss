@@ -1,0 +1,92 @@
+@use "variables";
+
+@media screen and (min-width: 1024px) {
+  body {
+    grid-template-rows: 7.188rem 1fr auto;
+  }
+
+  .header {
+    padding: 2.344rem 9.5rem;
+    .navbar {
+      .navbar__elements {
+        .item__logo {
+          width: 11rem;
+        }
+
+        .item--order-loupe {
+          padding: 0.5rem 1rem;
+          width: 24.563rem;
+        }
+
+        .item__btn {
+          width: 11.375rem;
+          height: 3.188rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .main {
+    .banner {
+      padding: 2rem 9.5rem;
+    }
+
+    .products {
+      padding: 1.5rem 9.5rem;
+
+      .products__header {
+        .header__title {
+          font-size: 2rem;
+        }
+      }
+
+      .products__list {
+        gap: 0.5rem;
+        .card {
+          .card__img {
+            width: 9.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .container {
+      padding: 4rem;
+      .footer__links {
+        flex-flow: row nowrap;
+        width: 50%;
+        gap: 7rem;
+      }
+
+      .form {
+        width: 50%;
+
+        .fieldset {
+          .fieldset__textarea {
+            height: 5.125rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main {
+    .products {
+      padding: 4rem 9.5rem;
+
+      .products__list {
+        gap: 1rem;
+        .card {
+          .card__img {
+            width: 11rem;
+          }
+        }
+      }
+    }
+  }
+}
