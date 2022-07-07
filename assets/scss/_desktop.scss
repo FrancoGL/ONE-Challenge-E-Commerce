@@ -22,6 +22,7 @@
           width: 11.375rem;
           height: 3.188rem;
           font-size: 1rem;
+          cursor: pointer;
         }
       }
     }
@@ -30,6 +31,10 @@
   .main {
     .banner {
       padding: 2rem 9.5rem;
+
+      .banner__btn {
+        cursor: pointer;
+      }
     }
 
     .products {
@@ -67,6 +72,9 @@
         .fieldset {
           .fieldset__textarea {
             height: 5.125rem;
+          }
+          .fieldset__btn {
+            cursor: pointer;
           }
         }
       }
