@@ -22,7 +22,7 @@
     />
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <link rel="stylesheet" href="./assets/css/admin-products.css" />
+    <link rel="stylesheet" href="./assets/css/add-product.css" />
   </head>
   <body>
     <header class="header">
@@ -32,6 +32,11 @@
             <a href="./index.html"
               ><img class="item__logo" src="./assets/img/Logo.svg" alt="Logo"
             /></a>
+          </li>
+          <li class="elements__item item--order-btn">
+            <a href="./admin-products.html"
+              ><button class="item__btn">Admin Menu</button></a
+            >
           </li>
           <li class="elements__item item--order-loupe">
             <input
@@ -50,12 +55,45 @@
         </ul>
       </nav>
     </header>
-    <main class="main__products">
-      <div class="products__header">
-        <h2 class="header__title">All products</h2>
-        <a href="./add-product.html"><button class="header__btn">Add product</button></a>
-      </div>
-      <div class="products__list"></div>
+    <main class="main__add-product">
+      <form class="form" action="#">
+        <fieldset class="form__fieldset">
+          <legend class="fieldset__legend">Add new product</legend>
+          <div class="fieldset__group">
+            <label class="group__label" for="url">URL Image</label>
+            <input class="group__input" type="url" name="url" id="url" />
+          </div>
+          <div class="fieldset__group">
+            <label class="group__label" for="category">Category</label>
+            <input
+              class="group__input"
+              type="text"
+              name="category"
+              id="category"
+            />
+          </div>
+          <div class="fieldset__group">
+            <label class="group__label" for="product-name">Product Name</label>
+            <input
+              class="group__input"
+              type="text"
+              name="product-name"
+              id="product-name"
+            />
+          </div>
+          <div class="fieldset__group">
+            <label class="group__label" for="price">Product Price</label>
+            <input class="group__input" type="text" name="price" id="price" />
+          </div>
+          <textarea
+            class="fieldset__description"
+            name="description"
+            id=""
+            placeholder="Description"
+          ></textarea>
+          <button class="fieldset__btn" type="submit">Add product</button>
+        </fieldset>
+      </form>
     </main>
     <footer class="footer">
       <div class="container">
@@ -105,6 +143,5 @@
         </p>
       </div>
     </footer>
-    <script src="./assets/js/set_products_admin.js"></script>
   </body>
 </html>
