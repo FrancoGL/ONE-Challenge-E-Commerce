@@ -1,5 +1,14 @@
 @use "variables";
 
+$footer-background: variables.$fifth-color;
+$footer-links-color: variables.$secondary-default-color;
+$form-input-background: variables.$primary-default-color;
+$form-label-color: variables.$third-color;
+$form-btn-background: variables.$primary-color;
+$form-btn-color: variables.$primary-default-color;
+$attribution-background: variables.$primary-default-color;
+$attribution-color: variables.$secondary-default-color;
+
 .footer {
   grid-area: footer;
   grid-column: 1 / 2;
@@ -7,7 +16,7 @@
 
   .container {
     padding: 1.651rem 1rem 1rem 1rem;
-    background-color: variables.$footer-background;
+    background-color: $footer-background;
 
     .footer__links {
       display: flex;
@@ -24,7 +33,7 @@
           margin-bottom: 1rem;
           font-weight: 500;
           text-align: center;
-          color: variables.$footer-links-color;
+          color: $footer-links-color;
           text-decoration: none;
         }
       }
@@ -42,12 +51,12 @@
         .fieldset__input {
           padding: 0.5rem 0.75rem;
           margin-bottom: 1rem;
-          background-color: variables.$form-background;
+          background-color: $form-input-background;
           border-top-left-radius: 0.25rem;
           border-top-right-radius: 0.25rem;
           .input__label {
             display: block;
-            color: variables.$label-color;
+            color: $form-label-color;
           }
 
           .input__element {
@@ -73,8 +82,8 @@
         .fieldset__btn {
           width: 8.313rem;
           padding: 0.75rem 0.5rem;
-          background-color: variables.$form-btn-background;
-          color: variables.$form-btn-color;
+          background-color: $form-btn-background;
+          color: $form-btn-color;
           border: none;
         }
       }
@@ -84,11 +93,11 @@
   .attribution {
     padding: 2rem 1rem;
     font-weight: 500;
-    background-color: variables.$attribution-background;
+    background-color: $attribution-background;
     text-align: center;
 
     .attribution__link {
-      color: variables.$attribution-color;
+      color: $attribution-color;
       text-decoration: none;
     }
   }

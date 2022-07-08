@@ -1,5 +1,7 @@
 @use "variables";
 
+$main-background: variables.$secondary-color;
+
 html {
   font-family: variables.$font-family;
 }
@@ -19,6 +21,6 @@ body {
   box-sizing: border-box;
 
   main {
-    background-color: variables.$main-background;
+    background-color: $main-background;
   }
 }

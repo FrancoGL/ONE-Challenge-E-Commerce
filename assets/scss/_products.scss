@@ -1,5 +1,7 @@
 @use "variables";
 
+$products-link-color: variables.$primary-color;
+
 .products--one {
   grid-area: starwars;
   grid-column: 1 / 2;
@@ -36,6 +38,7 @@
       font-weight: 700;
       font-size: 0.875rem;
       text-decoration: none;
+      color: $products-link-color;
 
       .header__arrow {
         margin-left: 0.417rem;
@@ -68,6 +71,7 @@
           font-weight: 700;
           font-size: 0.875rem;
           text-decoration: none;
+          color: $products-link-color;
         }
       }
     }

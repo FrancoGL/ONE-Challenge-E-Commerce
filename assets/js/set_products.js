@@ -36,12 +36,12 @@ const generateElement = (image) => {
   bodyTitle.textContent = "Product XYZ";
 
   cardBody.appendChild(bodyTitle);
-  // Body subtitle
-  let bodySubtitle = document.createElement("p");
-  bodySubtitle.classList.add("body__subtitle");
-  bodySubtitle.textContent = "R$ 60,00";
+  // Body price
+  let bodyPrice = document.createElement("p");
+  bodyPrice.classList.add("body__price");
+  bodyPrice.textContent = "R$ 60,00";
 
-  cardBody.appendChild(bodySubtitle);
+  cardBody.appendChild(bodyPrice);
   // Body link
   let bodyLink = document.createElement("a");
   bodyLink.href = "#";

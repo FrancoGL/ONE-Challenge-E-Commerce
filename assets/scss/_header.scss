@@ -1,11 +1,14 @@
 @use "variables";
 
+$header-background: variables.$primary-default-color;
+$btn-border-login-color: variables.$primary-color;
+
 .header {
   grid-area: header;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   padding: 1rem 1.177rem;
-  background-color: variables.$header-background-color;
+  background-color: $header-background;
 
   .navbar {
     width: 100%;
@@ -20,8 +23,8 @@
         font-size: 0.875rem;
         font-weight: 600;
         background: none;
-        color: variables.$btn-login-color;
-        border: 1px solid variables.$btn-login-border-color;
+        color: $btn-border-login-color;
+        border: 1px solid $btn-border-login-color;
       }
 
       .item__text {

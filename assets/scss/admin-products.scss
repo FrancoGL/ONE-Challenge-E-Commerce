@@ -1,0 +1,109 @@
+@use "variables";
+
+$btn-background: variables.$primary-color;
+$btn-color: variables.$primary-default-color;
+
+.main__products {
+  grid-area: main;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  padding: 2rem;
+
+  .products__header {
+    .header__title {
+      margin-bottom: 1rem;
+      font-size: 1.375rem;
+      font-weight: 700;
+    }
+
+    .header__btn {
+      width: 9.375rem;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      background-color: $btn-background;
+      color: $btn-color;
+      border: none;
+      border-radius: 0.25rem;
+    }
+  }
+
+  .products__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 1rem 1rem;
+    .card {
+      //margin-bottom: 1rem;
+      .card__header {
+        width: 8.75rem;
+        height: 10.875rem;
+        position: relative;
+        .header__img {
+          width: inherit;
+          height: inherit;
+        }
+        .btn__group {
+          position: absolute;
+          top: 0.5rem;
+          right: 0.5rem;
+
+          .btn__item {
+            margin-right: 1.5rem;
+          }
+        }
+      }
+      .card__body {
+        .body__title {
+          margin: 0.5rem 0 0.5rem 0;
+          font-weight: 500;
+          font-size: 0.875rem;
+        }
+        .body__price {
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+        }
+        .body__number {
+          font-size: 0.875rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main__products {
+    .products__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .products__list {
+      .card {
+        .card__header {
+          width: 10.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main__products {
+    .products__header {
+      .header__btn {
+        cursor: pointer;
+      }
+    }
+
+    padding: 4.406rem 9.5rem;
+    .products__list {
+      .card {
+        .card__header {
+          width: 11rem;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,8 @@
 @use "variables";
 
+$banner-color: variables.$primary-default-color;
+$banner-btn-background: variables.$primary-color;
+
 .banner {
   grid-area: banner;
   grid-column: 1 / 2;
@@ -12,7 +15,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: variables.$font-color-banner;
+  color: $banner-color;
 
   .banner__title {
     margin-bottom: 0.5rem;
@@ -31,8 +34,8 @@
     padding: 0.75rem 0.7rem;
     font-size: 0.875rem;
     font-weight: 600;
-    background-color: variables.$btn-banner-background;
-    color: variables.$btn-banner-color;
+    background-color: $banner-btn-background;
+    color: $banner-color;
     border: none;
   }
 }

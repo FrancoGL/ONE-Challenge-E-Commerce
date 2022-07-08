@@ -1,5 +1,8 @@
 @use "variables";
 
+$search-box-background: variables.$fourth-color;
+$search-bot-color: variables.$third-color;
+
 @media screen and (min-width: 768px) {
   .header {
     padding: 1rem 2rem;
@@ -22,8 +25,8 @@
           align-items: center;
           justify-content: space-between;
           order: 2;
-          background-color: variables.$search-box-background-color;
-          color: variables.$search-box-color;
+          background-color: $search-box-background;
+          color: $search-bot-color;
           border-radius: 20px;
 
           .item__text {
