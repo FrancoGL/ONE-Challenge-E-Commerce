@@ -1,0 +1,82 @@
+@use "variables";
+
+$fieldset-input-background: variables.$primary-default-color;
+$label-color: variables.$third-color;
+$input-border-color: variables.$sixth-color;
+$btn-background: variables.$primary-color;
+$btn-color: variables.$primary-default-color;
+
+.main__add-product {
+  padding: 1rem;
+  .form {
+    .form__fieldset {
+      display: flex;
+      flex-flow: column nowrap;
+      .fieldset__legend {
+        width: 100%;
+        margin-bottom: 1rem;
+        font-size: 1.375rem;
+        font-weight: 700;
+        text-align: center;
+      }
+      .fieldset__group {
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: $fieldset-input-background;
+        padding: 0.5rem 0.75rem;
+        margin-bottom: 1rem;
+        border-radius: 0.25rem;
+        border-bottom: 2px solid $input-border-color;
+
+        .group__label {
+          margin-bottom: 0.5rem;
+          font-size: 0.75rem;
+          color: $label-color;
+        }
+        .group__input {
+          border: none;
+          outline: none;
+        }
+      }
+
+      .fieldset__description {
+        margin-bottom: 1rem;
+        padding: 0.5rem 0.5rem;
+        height: 5.125rem;
+        outline: none;
+        border: none;
+        resize: none;
+        border-bottom: 2px solid $input-border-color;
+      }
+
+      .fieldset__btn {
+        padding: 0.75rem;
+        background-color: $btn-background;
+        color: $btn-color;
+        border: none;
+        border-radius: 0.25rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main__add-product {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main__add-product {
+    .form {
+      margin: 0 auto;
+      width: 35rem;
+
+      .form__fieldset {
+        .fieldset__legend {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
