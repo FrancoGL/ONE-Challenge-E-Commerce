@@ -4,28 +4,28 @@ let deleteIconPath = "./assets/icons/delete.svg";
 let updateIconPath = "./assets/icons/update.svg";
 
 const starWars = [
-  "./assets/img/star-wars/cup.webp",
-  "./assets/img/star-wars/darthvader.webp",
-  "./assets/img/star-wars/joda.webp",
-  "./assets/img/star-wars/startropper.webp",
-  "./assets/img/star-wars/baby-joda.webp",
-  "./assets/img/star-wars/dark.webp",
+  "./assets/img/star-wars/cup.svg",
+  "./assets/img/star-wars/darthvader.svg",
+  "./assets/img/star-wars/joda.svg",
+  "./assets/img/star-wars/startropper.svg",
+  "./assets/img/star-wars/baby-joda.svg",
+  "./assets/img/star-wars/dark.svg",
 ];
 const consoles = [
-  "./assets/img/consoles/xbox.webp",
-  "./assets/img/consoles/play.webp",
-  "./assets/img/consoles/nintend.webp",
-  "./assets/img/consoles/console.webp",
-  "./assets/img/consoles/console2.webp",
-  "./assets/img/consoles/console3.webp",
+  "./assets/img/consoles/xbox.svg",
+  "./assets/img/consoles/play.svg",
+  "./assets/img/consoles/nintend.svg",
+  "./assets/img/consoles/console.svg",
+  "./assets/img/consoles/console2.svg",
+  "./assets/img/consoles/console3.svg",
 ];
 const various = [
-  "./assets/img/various/shirt.webp",
-  "./assets/img/various/jostick.webp",
-  "./assets/img/various/sonic.webp",
-  "./assets/img/various/clock.webp",
-  "./assets/img/various/vr.webp",
-  "./assets/img/various/pikachu.webp",
+  "./assets/img/various/shirt.svg",
+  "./assets/img/various/jostick.svg",
+  "./assets/img/various/sonic.svg",
+  "./assets/img/various/clock.svg",
+  "./assets/img/various/vr.svg",
+  "./assets/img/various/pikachu.svg",
 ];
 
 // Create element

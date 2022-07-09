@@ -53,6 +53,11 @@ $products-link-color: variables.$primary-color;
     justify-content: space-between;
     gap: 1rem;
     .card {
+      .card__img {
+        display: block;
+        width: 9.75rem;
+        height: 10.875rem;
+      }
       .card__body {
         margin: 0.5rem 0;
 

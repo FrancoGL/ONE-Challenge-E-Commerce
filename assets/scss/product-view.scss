@@ -1,0 +1,133 @@
+@use "variables";
+
+$products-link-color: variables.$primary-color;
+
+.main__product-view {
+  padding-bottom: 1rem;
+  .product-view__card {
+    .card__img {
+      width: 100%;
+      height: 12rem;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .card__body {
+      padding: 0 1rem;
+      margin-bottom: 2rem;
+      .body__title {
+        margin-top: 1rem;
+        font-size: 1.375rem;
+        font-weight: 500;
+      }
+
+      .body__price {
+        margin-top: 0.5rem;
+        font-weight: 700;
+      }
+
+      .body__description {
+        margin-top: 0.5rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .relationed {
+    padding: 0 1rem;
+    .relationed__title {
+      margin-bottom: 1rem;
+      font-size: 1.375rem;
+      font-weight: 700;
+    }
+
+    .product__list {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      .card {
+        .card__img {
+          display: block;
+          width: 9.75rem;
+          height: 10.875rem;
+        }
+        .card__body {
+          margin: 0.5rem 0;
+
+          .body__title {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.875rem;
+          }
+
+          .body__price {
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+          }
+
+          .body__link {
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-decoration: none;
+            color: $products-link-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main__product-view {
+    padding: 2rem;
+    .product-view__card {
+      display: flex;
+      align-items: center;
+      .card__img {
+        width: 50%;
+      }
+      .card__body {
+        width: 50%;
+      }
+    }
+    .relationed {
+      padding: 0;
+      .product__list {
+        .card {
+          .card__img {
+            width: 10.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main__product-view {
+    padding: 2.1rem;
+    .product-view__card {
+      .card__img {
+        height: 25.188rem;
+      }
+      .card__body {
+        .body__title {
+          font-size: 3.25rem;
+        }
+      }
+    }
+    .relationed {
+      .relationed__title {
+        margin-top: 4rem;
+      }
+      .product__list {
+        .card {
+          .card__img {
+            width: 11rem;
+          }
+        }
+      }
+    }
+  }
+}

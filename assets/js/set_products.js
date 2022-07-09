@@ -1,22 +1,12 @@
+import {
+  starWarsProductList,
+  consolesProductList,
+  variousProductList,
+} from "./products.js";
+
 let productList = document.querySelectorAll(".products__list");
-let productCards = document.querySelectorAll(".card");
 
-console.log(productList);
-
-const starWars = [
-  "./assets/img/star-wars/baby-joda.webp",
-  "./assets/img/star-wars/dark.webp",
-];
-const consoles = [
-  "./assets/img/consoles/console2.webp",
-  "./assets/img/consoles/console3.webp",
-];
-const various = [
-  "./assets/img/various/vr.webp",
-  "./assets/img/various/pikachu.webp",
-];
-
-const generateElement = (image) => {
+const generateElement = (image, id) => {
   // Card
   let card = document.createElement("div");
   card.classList.add("card");
@@ -44,9 +34,11 @@ const generateElement = (image) => {
   cardBody.appendChild(bodyPrice);
   // Body link
   let bodyLink = document.createElement("a");
-  bodyLink.href = "#";
+  bodyLink.href = "./product-view.html";
   bodyLink.classList.add("body__link");
   bodyLink.textContent = "See product";
+  bodyLink.setAttribute("itemid", id);
+  bodyLink.id = "product-view";
 
   cardBody.appendChild(bodyLink);
   // Add body to card
@@ -54,9 +46,33 @@ const generateElement = (image) => {
   return card;
 };
 
-const setImg = (elementNumber, imgs) => {
-  for (let img of imgs) {
-    productList[elementNumber].appendChild(generateElement(img));
+const generateImgPhoneAndTablet = (elementNumber, imgs) => {
+  for (let i = 0; i < 4; i++) {
+    let pathImage = imgs[i].path;
+    let idProduct = imgs[i].id;
+    productList[elementNumber].appendChild(
+      generateElement(pathImage, idProduct)
+    );
+  }
+};
+
+const setImagesOnPhone = () => {
+  let windowSize = window.innerWidth;
+
+  if (windowSize >= 375 && windowSize <= 1024) {
+    generateImgPhoneAndTablet(0, starWarsProductList);
+    generateImgPhoneAndTablet(1, consolesProductList);
+    generateImgPhoneAndTablet(2, variousProductList);
+  }
+};
+
+const generateImgDesktop = (elementNumber, imgs) => {
+  for (let element of imgs) {
+    let pathImage = element.path;
+    let idProduct = element.id;
+    productList[elementNumber].appendChild(
+      generateElement(pathImage, idProduct)
+    );
   }
 };
 
@@ -64,12 +80,24 @@ const setImagesOnDesktop = () => {
   let windowSize = window.innerWidth;
 
   if (windowSize >= 1024) {
-    setImg(0, starWars);
-    setImg(1, consoles);
-    setImg(2, various);
+    generateImgDesktop(0, starWarsProductList);
+    generateImgDesktop(1, consolesProductList);
+    generateImgDesktop(2, variousProductList);
   }
 };
 
 window.onload = () => {
+  setImagesOnPhone();
   setImagesOnDesktop();
+
+  let productLinkView = document.querySelectorAll("#product-view");
+
+  productLinkView.forEach((element) => {
+    element.addEventListener("click", (e) => {
+      localStorage.setItem(
+        "productId",
+        JSON.stringify(element.getAttribute("itemid"))
+      );
+    });
+  });
 };
