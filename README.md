@@ -14,10 +14,10 @@
 
 ## Overview
 * ### Mobile
-<img src="https://i.imgur.com/UPd8V96.png" width="30%" style="display: block; margin-left: 1.5rem;">
+<img src="https://i.imgur.com/mGTUFPr.png" width="30%" style="display: block; margin-left: 1.5rem;">
 
 * ### Desktop
-<img src="https://i.imgur.com/a2JlLam.png" width="30%" style="display: block; margin-left: 1.5rem;">
+<img src="https://i.imgur.com/NL2Vx2S.png" width="30%" style="display: block; margin-left: 1.5rem;">
 
 ## Build With
 * HTML
