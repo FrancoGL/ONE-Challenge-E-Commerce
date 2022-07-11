@@ -1,0 +1,69 @@
+@use "../../settings/colors" as colors;
+
+.products__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  .card {
+    .card__img {
+      display: block;
+      width: 9.75rem;
+      height: 10.875rem;
+    }
+    .card__body {
+      margin: 0.5rem 0;
+
+      .body__title {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        font-size: 0.875rem;
+      }
+
+      .body__price {
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+      }
+
+      .body__link {
+        font-weight: 700;
+        font-size: 0.875rem;
+        text-decoration: none;
+        color: colors.$primary-color;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .products__list {
+    .card {
+      .card__img {
+        width: 10.25rem;
+        height: 10.875rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .products__list {
+    gap: 0.5rem;
+    .card {
+      .card__img {
+        width: 9.75rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .products__list {
+    gap: 1rem;
+    .card {
+      .card__img {
+        width: 11rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "./products__header";
+@use "./products__list";
+
+.products {
+  padding: 1rem 1rem;
+}
+
+.products--one {
+  grid-area: starwars;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.products--two {
+  grid-area: consoles;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.products--three {
+  grid-area: various;
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+
+@media screen and (min-width: 1024px) {
+  .products {
+    padding: 1.5rem 9.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .products {
+    padding: 4rem 9.5rem;
+  }
+}

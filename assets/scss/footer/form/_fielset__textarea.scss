@@ -1,0 +1,20 @@
+.fieldset__textarea {
+  height: 5.125rem;
+  padding: 1rem 0.5rem;
+  margin-bottom: 0.5rem;
+  outline: none;
+  resize: none;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .fieldset__textarea {
+    height: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .fieldset__textarea {
+    height: 5.125rem;
+  }
+}

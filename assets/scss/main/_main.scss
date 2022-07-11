@@ -1,6 +1,6 @@
-@use "variables";
-@use "banner";
-@use "products";
+@use './banner';
+@use './products/products';
+@use '../settings/colors' as colors;
 
 .main {
   grid-area: main;
@@ -11,4 +11,11 @@
   grid-template-columns: auto;
   grid-template-rows: 12rem repeat(3, auto);
   gap: 1rem;
+  background-color: colors.$secondary-color;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    grid-template-rows: 22rem repeat(3, auto);
+  }
 }
