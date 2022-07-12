@@ -1,0 +1,12 @@
+@use "../../settings/colors" as colors;
+@use "./item__logo";
+@use "./item__text";
+@use "./item__btn";
+@use "./item__loupe";
+@use "./item__search";
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

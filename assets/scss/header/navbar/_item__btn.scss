@@ -1,0 +1,26 @@
+@use "../../settings/colors" as colors;
+
+.item__btn {
+  width: 8.313rem;
+  height: 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: none;
+  color: colors.$primary-color;
+  border: 1px solid colors.$primary-color;
+}
+
+@media screen and (min-width: 768px) {
+  .item--order-btn {
+    order: 3;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .item__btn {
+    width: 11.375rem;
+    height: 3.188rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}

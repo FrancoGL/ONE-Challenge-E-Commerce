@@ -1,0 +1,16 @@
+.item__loupe {
+  width: 1.066rem;
+}
+
+@media screen and (min-width: 768px) {
+  .item--order-loupe {
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .item--order-loupe {
+    padding: 0.5rem 1rem;
+    width: 24.563rem;
+  }
+}
