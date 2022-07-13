@@ -1,0 +1,9 @@
+@use "./header__title";
+@use "./header__link";
+
+.products__header {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

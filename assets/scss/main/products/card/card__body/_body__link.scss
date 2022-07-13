@@ -1,0 +1,8 @@
+@use '../../../../settings/colors' as colors;
+
+.body__link {
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: colors.$primary-color;
+}
