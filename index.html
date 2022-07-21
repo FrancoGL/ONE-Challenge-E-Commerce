@@ -56,37 +56,50 @@
       <section class="banner">
         <h2 class="banner__title">Promotional February</h2>
         <h3 class="banner__subtitle">Selected products with 33% off</h3>
-        <a href="#"><button class="banner__btn">See consoles</button></a>
+        <a href="./products.html"
+          ><button class="banner__btn">See Furniture</button></a
+        >
       </section>
       <section class="products products--one">
         <div class="products__header">
-          <h3 class="header__title">Star Wars</h3>
-          <a href="#" class="header__link"
+          <h3 class="header__title">Electronic</h3>
+          <a href="./products.html" class="header__link link--one"
             >Show whole
             <img class="header__arrow" src="./assets/img/arrow.svg" alt="Arrow"
           /></a>
         </div>
-        <div class="products__list"></div>
+        <div class="products__list list--one">
+          <template id="card__template">
+            <div class="card">
+              <img class="card__img" src="" alt="" />
+              <div class="card__body">
+                <h3 class="body__title"></h3>
+                <p class="body__price"></p>
+                <a href="" class="body__link"></a>
+              </div>
+            </div>
+          </template>
+        </div>
       </section>
       <section class="products products--two">
         <div class="products__header">
-          <h3 class="header__title">Consoles</h3>
-          <a href="#" class="header__link"
+          <h3 class="header__title">Furniture</h3>
+          <a href="./products.html" class="header__link link--two"
             >Show whole
             <img class="header__arrow" src="./assets/img/arrow.svg" alt="Arrow"
           /></a>
         </div>
-        <div class="products__list"></div>
+        <div class="products__list list--two"></div>
       </section>
       <section class="products products--three">
         <div class="products__header">
           <h3 class="header__title">Various</h3>
-          <a href="#" class="header__link"
+          <a href="./products.html" class="header__link link--three"
             >Show whole
             <img class="header__arrow" src="./assets/img/arrow.svg" alt="Arrow"
           /></a>
         </div>
-        <div class="products__list"></div>
+        <div class="products__list list--three"></div>
       </section>
     </main>
     <footer class="footer">
@@ -138,5 +151,7 @@
       </div>
     </footer>
   </body>
-  <script type="module" src="./assets/js/set_products.js"></script>
+  <!-- <script type="module" src="./assets/js/set_products.js"></script> -->
+  <script type="module" src="./assets/js/index.js"></script>
+  <!-- <script type="module" src="./assets/js/set_products.js"></script> -->
 </html>

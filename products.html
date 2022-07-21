@@ -7,7 +7,7 @@
     <title>AluraGeek</title>
     <link
       rel="shortcut icon"
-      href="./assets/img/favicon.svg"
+      href="./assets/favicons/favicon.svg"
       type="image/x-icon"
     />
     <!-- Reset and Normalize -->
@@ -22,7 +22,6 @@
     />
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <link rel="stylesheet" href="./assets/css/product-view.css" />
   </head>
   <body>
     <header class="header">
@@ -53,34 +52,22 @@
         </ul>
       </nav>
     </header>
-    <main class="main__product-view">
-      <template id="card__template">
-        <div class="card">
-          <img class="card__img" src="" alt="" />
-          <div class="card__body">
-            <h3 class="body__title"></h3>
-            <p class="body__price"></p>
-            <p class="body__description"></p>
-            <a href="" class="body__link"></a>
-          </div>
-        </div>
-      </template>
-      <div class="relationed">
-        <h2 class="relationed__title">Similar Products</h2>
-        <div class="product__list" id="product-relationed">
-          <template id="template--two">
-            <div class="card">
-              <img class="card__img" src="" alt="" />
-              <div class="card__body">
-                <h3 class="body__title"></h3>
-                <p class="body__price"></p>
-                <a href="" class="body__link"></a>
-              </div>
+    <main class="products">
+      <section class="products__list">
+        <template id="card__template">
+          <div class="card">
+            <img class="card__img" src="" alt="" />
+            <div class="card__body">
+              <h3 class="body__title"></h3>
+              <p class="body__price"></p>
+              <a href="" class="body__link"></a>
             </div>
-          </template>
-        </div>
-      </div>
+          </div>
+        </template>
+      </section>
+      <a href="#"><button>Next</button></a>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div class="footer__links">
@@ -129,6 +116,9 @@
         </p>
       </div>
     </footer>
-    <script type="module" src="./assets/js/set_product.js"></script>
+    <script
+      type="module"
+      src="./assets/js/set_products_by_category.js"
+    ></script>
   </body>
 </html>

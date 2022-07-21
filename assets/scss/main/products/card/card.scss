@@ -1,2 +1,24 @@
 @use "./card__img";
 @use "./card__body/card__body";
+
+.card {
+  width: 9.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 10.25rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 9.75rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 11rem;
+  }
+}
