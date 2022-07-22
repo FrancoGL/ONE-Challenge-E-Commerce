@@ -1,7 +1,10 @@
 import { checkWindowSize } from "../utils/check_window_size.js";
 
 export const getProducts = async (url) => {
-  let limit = checkWindowSize() === "Phone" ? 4 : 7;
+  let limit =
+    checkWindowSize().includes("Phone") || checkWindowSize().includes("Tablet")
+      ? 4
+      : 7;
 
   const response = await fetch(`${url}?offset=0&limit=${limit}`);
   const json = await response.json();
@@ -13,9 +16,18 @@ export const getProducts = async (url) => {
   return json;
 };
 
-export const getAllProducts = async (url) => {
+export const setTotalProductsFromCategory = async (url) => {
+  const response = await fetch(`${url}`);
+  const json = await response.json();
+
+  localStorage.setItem("totalProducts", json.length);
+};
+
+export const getAllProducts = async (url, offset = 0) => {
   let limit = 8;
-  const response = await fetch(`${url}?offset=0&limit=${limit}`);
+  localStorage.setItem("limit", limit);
+
+  const response = await fetch(`${url}?offset=${offset}&limit=${limit}`);
   const json = await response.json();
 
   if (!response.ok) {

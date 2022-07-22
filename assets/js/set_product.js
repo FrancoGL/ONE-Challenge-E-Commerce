@@ -1,11 +1,11 @@
 import { getProduct, getProducts } from "./crud/get_products.js";
 import {
-  generateCardElement,
   generateCardElements,
+  generateCardViewElement,
 } from "./utils/generate_card_elements.js";
 import { generateErrorElement } from "./utils/generate_error_element.js";
 
-const setProductsRelationed = async (categoryId) => {
+const setProductsRelated = async (categoryId) => {
   try {
     const products = await getProducts(
       `https://api.escuelajs.co/api/v1/categories/${categoryId}/products`
@@ -18,7 +18,7 @@ const setProductsRelationed = async (categoryId) => {
   }
 };
 
-const setProduct = async () => {
+export const setProduct = async () => {
   try {
     let $fragment = document.createDocumentFragment();
 
@@ -33,22 +33,18 @@ const setProduct = async () => {
 
     const $parentContainer = document.querySelector(".main__product-view");
 
-    const $templateOneProduct = generateCardElement(
+    const $templateOneProduct = generateCardViewElement(
       product,
-      true,
-      "card__template"
+      "card__template-view"
     );
 
     $fragment.appendChild(document.importNode($templateOneProduct, true));
 
     $parentContainer.prepend($templateOneProduct);
 
-    setProductsRelationed(categoryId);
+    setProductsRelated(categoryId);
   } catch (error) {
+    console.log(error);
     generateErrorElement(".main__product-view", error);
   }
 };
-
-document.addEventListener("DOMContentLoaded", () => {
-  setProduct();
-});

@@ -3,14 +3,20 @@ import {
   setProductsFurniture,
   setProductsVarious,
 } from "./set_products.js";
+import { setLoader, removeLoader } from "./set_remove_loader.js";
+
+let $loader;
 
 document.addEventListener("DOMContentLoaded", () => {
+  localStorage.removeItem("offset");
+  setLoader(".main", ".loader");
   setProductsElectronics();
   setProductsFurniture();
   setProductsVarious();
 });
 
 const showAllProductsFromCategory = (e) => {
+  localStorage.setItem("offset", 0);
   if (e.target.matches(".banner__btn")) {
     localStorage.setItem("category", "3");
   }
@@ -34,4 +40,12 @@ const showProduct = (e) => {
 document.addEventListener("click", (e) => {
   showAllProductsFromCategory(e);
   showProduct(e);
+});
+
+window.addEventListener("load", (e) => {
+  if (e.isTrusted) {
+    setInterval(() => {
+      removeLoader(".loader");
+    }, 2000);
+  }
 });

@@ -3,9 +3,11 @@ export const checkWindowSize = () => {
 
   if (window.innerWidth >= 375 && window.innerWidth < 768) {
     windowSizeLimit = "Phone";
-  } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+  }
+  if (window.innerWidth >= 768 && window.innerWidth < 1024) {
     windowSizeLimit = "Tablet";
-  } else {
+  }
+  if (window.innerHeight >= 1024) {
     windowSizeLimit = "Desktop";
   }
   return windowSizeLimit;

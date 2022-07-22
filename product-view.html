@@ -7,7 +7,7 @@
     <title>AluraGeek</title>
     <link
       rel="shortcut icon"
-      href="./assets/img/favicon.svg"
+      href="./assets/favicons/favicon.svg"
       type="image/x-icon"
     />
     <!-- Reset and Normalize -->
@@ -54,19 +54,18 @@
       </nav>
     </header>
     <main class="main__product-view">
-      <template id="card__template">
-        <div class="card">
-          <img class="card__img" src="" alt="" />
-          <div class="card__body">
-            <h3 class="body__title"></h3>
-            <p class="body__price"></p>
-            <p class="body__description"></p>
-            <a href="" class="body__link"></a>
+      <template id="card__template-view">
+        <div class="card-view">
+          <img class="card-view__img" src="" alt="" />
+          <div class="card-view__body">
+            <h3 class="body-view__title"></h3>
+            <p class="body-view__price"></p>
+            <p class="body-view__description"></p>
           </div>
         </div>
       </template>
-      <div class="relationed">
-        <h2 class="relationed__title">Similar Products</h2>
+      <div class="related">
+        <h2 class="related__title">Similar Products</h2>
         <div class="product__list" id="product-relationed">
           <template id="template--two">
             <div class="card">
@@ -129,6 +128,6 @@
         </p>
       </div>
     </footer>
-    <script type="module" src="./assets/js/set_product.js"></script>
+    <script type="module" src="./assets/js/product_view.js"></script>
   </body>
 </html>

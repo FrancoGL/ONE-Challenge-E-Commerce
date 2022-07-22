@@ -1,0 +1,26 @@
+@use "./settings/config";
+@use "./header/header";
+@use "./main/main";
+@use "./footer/footer";
+@use "./main/loader.scss";
+@use "./settings/colors" as colors;
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation__btn {
+  width: 8rem;
+  margin-left: 1rem;
+  background-color: colors.$primary-color;
+  color: colors.$primary-default-color;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.navigation__btn.disabled {
+  background-color: colors.$primary-color-disable;
+}
