@@ -1,4 +1,5 @@
 export const generateErrorElement = (parentElementClass, errorObject) => {
+
   const $spanError = document.createElement("span");
   const $parentElement = document.querySelector(parentElementClass);
 

@@ -7,7 +7,7 @@
     <title>AluraGeek</title>
     <link
       rel="shortcut icon"
-      href="./assets/img/favicon.svg"
+      href="./assets/favicons/favicon.svg"
       type="image/x-icon"
     />
     <!-- Reset and Normalize -->
@@ -21,19 +21,18 @@
       rel="stylesheet"
     />
     <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/admin-products.css" />
   </head>
   <body>
     <header class="header">
       <nav class="navbar">
-        <ul class="navbar__elements">
-          <li class="elements__item item--order-logo">
+        <ul class="navbar__list">
+          <li class="list__item item--order-logo">
             <a href="./index.html"
               ><img class="item__logo" src="./assets/img/Logo.svg" alt="Logo"
             /></a>
           </li>
-          <li class="elements__item item--order-loupe">
+          <li class="list__item item--order-loupe item--search">
             <input
               class="item__text"
               type="text"
@@ -53,7 +52,9 @@
     <main class="main__products">
       <div class="products__header">
         <h2 class="header__title">All products</h2>
-        <a href="./add-product.html"><button class="header__btn">Add product</button></a>
+        <a href="./add-product.html"
+          ><button class="header__btn">Add product</button></a
+        >
       </div>
       <div class="products__list"></div>
     </main>

@@ -4,15 +4,16 @@ import {
   setProductsVarious,
 } from "./set_products.js";
 import { setLoader, removeLoader } from "./set_remove_loader.js";
-
-let $loader;
+import { validateInputName } from "./validate_form.js";
+import menuProductsAdmin from "./menu_products_admin.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   localStorage.removeItem("offset");
-  setLoader(".main", ".loader");
+  setLoader(".loading", ".loader");
   setProductsElectronics();
   setProductsFurniture();
   setProductsVarious();
+  menuProductsAdmin("#item__btn", "#item__link");
 });
 
 const showAllProductsFromCategory = (e) => {
@@ -40,6 +41,12 @@ const showProduct = (e) => {
 document.addEventListener("click", (e) => {
   showAllProductsFromCategory(e);
   showProduct(e);
+});
+
+document.addEventListener("input", (e) => {
+  if (e.target.matches("input") && e.inputType === "insertText") {
+    validateInputName();
+  }
 });
 
 window.addEventListener("load", (e) => {

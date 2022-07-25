@@ -1,4 +1,5 @@
 import { setAllProductsByCategory } from "./set_products_by_category.js";
+import { setLoader, removeLoader } from "./set_remove_loader.js";
 
 const setBtnPreviousConfig = () => {
   let offset = parseInt(localStorage.getItem("offset"));
@@ -31,6 +32,7 @@ const setBtnNextConfig = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   let getCategory = parseInt(localStorage.getItem("category"));
+  setLoader(".loading", ".loader");
   setAllProductsByCategory(getCategory);
   setBtnPreviousConfig();
   setBtnNextConfig();
@@ -48,5 +50,13 @@ document.addEventListener("click", (e) => {
   if (e.target.matches("#btn-previous")) {
     offset = offset - limit;
     localStorage.setItem("offset", offset);
+  }
+});
+
+window.addEventListener("load", (e) => {
+  if (e.isTrusted) {
+    setInterval(() => {
+      removeLoader(".loader");
+    }, 2000);
   }
 });
