@@ -1,5 +1,6 @@
 import { setAllProductsByCategory } from "./set_products_by_category.js";
 import { setLoader, removeLoader } from "./set_remove_loader.js";
+import menuProductsAdmin from "./menu_products_admin.js";
 
 const setBtnPreviousConfig = () => {
   let offset = parseInt(localStorage.getItem("offset"));
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setAllProductsByCategory(getCategory);
   setBtnPreviousConfig();
   setBtnNextConfig();
+  menuProductsAdmin("#item__btn", "#item__link");
 });
 
 document.addEventListener("click", (e) => {

@@ -4,6 +4,7 @@
 @use "./footer/footer";
 @use "./main/loader.scss";
 @use "./main/inline__error";
+@use "./navigation";
 @use "./settings/colors" as colors;
 
 .main__products {
@@ -31,6 +32,7 @@
   }
 
   .products__list {
+    margin-bottom: 1rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -46,7 +48,7 @@
         }
         .btn__group {
           position: absolute;
-          top: 1.5rem;
+          top: 1rem;
           right: 0.8rem;
 
           .btn__item {

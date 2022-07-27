@@ -23,15 +23,12 @@ export const auth = async (email, password) => {
   };
 
   const token = await authentication(options(email, password));
-  console.log(token);
 
   if (token === null) {
     throw { status: response.status, statusText: response.statusText };
   }
 
-  const json = token.access_token;
-
-  localStorage.setItem("token", json);
+  localStorage.setItem("token", token.access_token);
 
   return token !== null ? true : false;
 };

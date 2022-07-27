@@ -1,13 +1,14 @@
-@use "variables";
-
-$fieldset-input-background: variables.$primary-default-color;
-$label-color: variables.$third-color;
-$input-border-color: variables.$sixth-color;
-$btn-background: variables.$primary-color;
-$btn-color: variables.$primary-default-color;
+@use "./settings/config";
+@use "./header/header";
+@use "./main/main";
+@use "./footer/footer";
+@use "./main/loader.scss";
+@use "./main/inline__error";
+@use "./settings/colors" as colors;
 
 .main__add-product {
   padding: 1rem;
+  background-color: colors.$secondary-color;
   .form {
     .form__fieldset {
       display: flex;
@@ -22,16 +23,16 @@ $btn-color: variables.$primary-default-color;
       .fieldset__group {
         display: flex;
         flex-flow: column nowrap;
-        background-color: $fieldset-input-background;
+        background-color: colors.$primary-default-color;
         padding: 0.5rem 0.75rem;
         margin-bottom: 1rem;
         border-radius: 0.25rem;
-        border-bottom: 2px solid $input-border-color;
+        border-bottom: 2px solid colors.$sixth-color;
 
         .group__label {
           margin-bottom: 0.5rem;
           font-size: 0.75rem;
-          color: $label-color;
+          color: colors.$third-color;
         }
         .group__input {
           border: none;
@@ -46,13 +47,13 @@ $btn-color: variables.$primary-default-color;
         outline: none;
         border: none;
         resize: none;
-        border-bottom: 2px solid $input-border-color;
+        border-bottom: 2px solid colors.$sixth-color;
       }
 
       .fieldset__btn {
         padding: 0.75rem;
-        background-color: $btn-background;
-        color: $btn-color;
+        background-color: colors.$primary-color;
+        color: colors.$primary-default-color;
         border: none;
         border-radius: 0.25rem;
       }

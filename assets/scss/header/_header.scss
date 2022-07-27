@@ -1,5 +1,5 @@
-@use '../settings/colors.scss' as colors;
-@use './navbar/navbar.scss';
+@use "../settings/colors.scss" as colors;
+@use "./navbar/navbar.scss";
 
 .header {
   grid-area: header;

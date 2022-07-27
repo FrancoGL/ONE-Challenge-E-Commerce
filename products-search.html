@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AluraGeek</title>
+    <title>Alura Geek</title>
     <link
       rel="shortcut icon"
       href="./assets/favicons/favicon.svg"
@@ -21,7 +21,7 @@
       rel="stylesheet"
     />
     <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/admin-products.css" />
+    <link rel="stylesheet" href="./assets/css/product-page.css" />
   </head>
   <body class="loading">
     <header class="header">
@@ -31,6 +31,11 @@
             <a href="./index.html"
               ><img class="item__logo" src="./assets/img/Logo.svg" alt="Logo"
             /></a>
+          </li>
+          <li class="list__item item--order-btn">
+            <a href="./login.html" id="item__link"
+              ><button class="item__btn" id="item__btn">Login</button></a
+            >
           </li>
           <li class="list__item item--order-loupe item--search">
             <input
@@ -49,41 +54,21 @@
         </ul>
       </nav>
     </header>
-    <main class="main__products">
-      <div class="products__header">
-        <h2 class="header__title">All products</h2>
-        <a href="./add-product.html"
-          ><button class="header__btn">Add product</button></a
-        >
-      </div>
-      <div class="products__list">
+    <main class="products">
+      <section class="products__list">
         <template id="card__template">
           <div class="card">
-            <div class="card__header">
-              <img class="header__img" src="" alt="" />
-              <div class="btn__group">
-                <a class="update__link" href=""><img class="btn__update btn__item" src="" alt=""></a>
-                <a class="delete__link" href=""><img src="" class="btn__delete " alt=""></a>
-              </div>
-            </div>
+            <img class="card__img" src="" alt="" />
             <div class="card__body">
               <h3 class="body__title"></h3>
               <p class="body__price"></p>
+              <a href="" class="body__link"></a>
             </div>
           </div>
         </template>
-      </div>
-      <div class="navigation">
-        <a href="./admin-products.html"
-          ><button class="navigation__btn" id="btn-previous">
-            Previous
-          </button></a
-        >
-        <a href="./admin-products.html"
-          ><button class="navigation__btn" id="btn-next">Next</button></a
-        >
-      </div>
+      </section>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div class="footer__links">
@@ -132,7 +117,7 @@
         </p>
       </div>
     </footer>
-    <script type="module" src="./assets/js/admin-products.js"></script>
+    <script type="module" src="./assets/js/products-search.js"></script>
     <script type="module" src="./assets/js/search.js"></script>
   </body>
 </html>

@@ -7,7 +7,7 @@
     <title>AluraGeek</title>
     <link
       rel="shortcut icon"
-      href="./assets/img/favicon.svg"
+      href="./assets/favicons/favicon.svg"
       type="image/x-icon"
     />
     <!-- Reset and Normalize -->
@@ -27,18 +27,13 @@
   <body>
     <header class="header">
       <nav class="navbar">
-        <ul class="navbar__elements">
-          <li class="elements__item item--order-logo">
+        <ul class="navbar__list">
+          <li class="list__item item--order-logo">
             <a href="./index.html"
               ><img class="item__logo" src="./assets/img/Logo.svg" alt="Logo"
             /></a>
           </li>
-          <li class="elements__item item--order-btn">
-            <a href="./admin-products.html"
-              ><button class="item__btn">Admin Menu</button></a
-            >
-          </li>
-          <li class="elements__item item--order-loupe">
+          <li class="list__item item--order-loupe item--search">
             <input
               class="item__text"
               type="text"
@@ -88,7 +83,7 @@
           <textarea
             class="fieldset__description"
             name="description"
-            id=""
+            id="description"
             placeholder="Description"
           ></textarea>
           <button class="fieldset__btn" type="submit">Add product</button>
@@ -143,5 +138,6 @@
         </p>
       </div>
     </footer>
+    <script type="module" src="./assets/js/add_product.js"></script>
   </body>
 </html>

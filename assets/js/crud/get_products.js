@@ -23,6 +23,13 @@ export const setTotalProductsFromCategory = async (url) => {
   localStorage.setItem("totalProducts", json.length);
 };
 
+export const setTotalProducts = async (url) => {
+  const response = await fetch(`${url}`);
+  const json = await response.json();
+
+  localStorage.setItem("totalProducts", json.length);
+};
+
 export const getAllProducts = async (url, offset = 0) => {
   let limit = 8;
   localStorage.setItem("limit", limit);
@@ -31,9 +38,7 @@ export const getAllProducts = async (url, offset = 0) => {
   const json = await response.json();
 
   if (!response.ok) {
-    throw new Error(
-      `{status: ${response.status}, statusText: ${response.statusText}}`
-    );
+    throw { status: response.status, statusText: response.statusText };
   }
   return json;
 };
@@ -43,10 +48,20 @@ export const getProduct = async (url, id) => {
   const json = await response.json();
 
   if (!response.ok) {
-    throw new Error(
-      `{status: ${response.status}, statusText: ${response.statusText}}`
-    );
+    throw { status: response.status, statusText: response.statusText };
   }
 
   return json;
+};
+
+export const getAll = async () => {
+  return new Promise((resolve, reject) => {
+    fetch("https://api.escuelajs.co/api/v1/products/")
+      .then((response) => {
+        resolve(response.json());
+      })
+      .catch((error) =>
+        reject({ status: error.status, statusText: error.statusText })
+      );
+  });
 };

@@ -2,6 +2,16 @@
   display: none;
 }
 
+.item__text.active {
+  display: inline-block;
+  width: 90%;
+  font-size: 0.8rem;
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
 @media screen and (min-width: 768px) {
   .item__text {
     display: inline-block;
