@@ -1,0 +1,22 @@
+@use "../settings/colors.scss" as colors;
+@use "./navbar/navbar.scss";
+
+.header {
+  grid-area: header;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  padding: 1rem 1.177rem;
+  background-color: colors.$primary-default-color;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 2.344rem 9.5rem;
+  }
+}

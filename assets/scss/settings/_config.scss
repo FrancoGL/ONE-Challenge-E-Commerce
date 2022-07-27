@@ -1,9 +1,7 @@
-@use "variables";
-
-$main-background: variables.$secondary-color;
+@use "./fonts" as fonts;
 
 html {
-  font-family: variables.$font-family;
+  font-family: fonts.$font-family;
 }
 
 body {
@@ -19,8 +17,10 @@ body {
   grid-template-columns: auto;
   grid-template-rows: 4.5rem 1fr auto;
   box-sizing: border-box;
+}
 
-  main {
-    background-color: $main-background;
+@media screen and (min-width: 1024px){
+  body {
+    grid-template-rows: 7.188rem 1fr auto;
   }
 }

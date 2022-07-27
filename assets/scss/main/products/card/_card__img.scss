@@ -1,0 +1,24 @@
+.card__img {
+  display: block;
+  width: 9.75rem;
+  height: 10.875rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card__img {
+    width: 10.25rem;
+    height: 10.875rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card__img {
+    width: 9.75rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card__img {
+    width: 11rem;
+  }
+}

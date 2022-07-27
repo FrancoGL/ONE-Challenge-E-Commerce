@@ -1,0 +1,21 @@
+@use "../../settings/colors" as colors;
+
+.item--search.active {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .item--search {
+    width: 17rem;
+    height: 2.5rem;
+    padding: 0.2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: colors.$fourth-color;
+    color: colors.$third-color;
+    border-radius: 20px;
+  }
+}

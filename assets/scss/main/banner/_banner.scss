@@ -1,0 +1,31 @@
+@use "../../settings/colors" as colors;
+@use "./banner__title";
+@use "./banner__subtitle";
+@use "./banner__btn";
+
+.banner {
+  grid-area: banner;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  background: url("../img/banner-image.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: colors.$primary-default-color;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner {
+    padding: 2rem 9.5rem;
+  }
+}

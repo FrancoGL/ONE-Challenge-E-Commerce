@@ -23,19 +23,21 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
-  <body>
+  <body class="loading">
     <header class="header">
       <nav class="navbar">
-        <ul class="navbar__elements">
-          <li class="elements__item item--order-logo">
+        <ul class="navbar__list">
+          <li class="list__item item--order-logo">
             <a href="./index.html"
               ><img class="item__logo" src="./assets/img/Logo.svg" alt="Logo"
             /></a>
           </li>
-          <li class="elements__item item--order-btn">
-            <a href="./login.html"><button class="item__btn">Login</button></a>
+          <li class="list__item item--order-btn">
+            <a href="./login.html" id="item__link"
+              ><button class="item__btn" id="item__btn">Login</button></a
+            >
           </li>
-          <li class="elements__item item--order-loupe">
+          <li class="list__item item--order-loupe item--search">
             <input
               class="item__text"
               type="text"
@@ -56,44 +58,50 @@
       <section class="banner">
         <h2 class="banner__title">Promotional February</h2>
         <h3 class="banner__subtitle">Selected products with 33% off</h3>
-        <a href="#"><button class="banner__btn">See consoles</button></a>
+        <a href="./products.html"
+          ><button class="banner__btn">See Furniture</button></a
+        >
       </section>
       <section class="products products--one">
         <div class="products__header">
-          <h3 class="header__title">Star Wars</h3>
-          <a href="#" class="header__link"
+          <h3 class="header__title">Electronic</h3>
+          <a href="./products.html" class="header__link link--one"
             >Show whole
-            <img class="header__arrow" src="./assets/img/arrow.svg" alt=""
+            <img class="header__arrow" src="./assets/img/arrow.svg" alt="Arrow"
           /></a>
         </div>
-        <div class="products__list"></div>
+        <div class="products__list list--one">
+          <template id="card__template">
+            <div class="card">
+              <img class="card__img" src="" alt="" />
+              <div class="card__body">
+                <h3 class="body__title"></h3>
+                <p class="body__price"></p>
+                <a href="" class="body__link"></a>
+              </div>
+            </div>
+          </template>
+        </div>
       </section>
       <section class="products products--two">
         <div class="products__header">
-          <h3 class="header__title">Consoles</h3>
-          <a href="#" class="header__link"
+          <h3 class="header__title">Furniture</h3>
+          <a href="./products.html" class="header__link link--two"
             >Show whole
-            <img
-              class="card__img"
-              class="header__arrow"
-              src="./assets/img/arrow.svg"
-              alt="Product Example"
+            <img class="header__arrow" src="./assets/img/arrow.svg" alt="Arrow"
           /></a>
         </div>
-        <div class="products__list"></div>
+        <div class="products__list list--two"></div>
       </section>
       <section class="products products--three">
         <div class="products__header">
           <h3 class="header__title">Various</h3>
-          <a href="#" class="header__link"
+          <a href="./products.html" class="header__link link--three"
             >Show whole
-            <img
-              class="header__arrow"
-              src="./assets/img/arrow.svg"
-              alt="Product Example"
+            <img class="header__arrow" src="./assets/img/arrow.svg" alt="Arrow"
           /></a>
         </div>
-        <div class="products__list"></div>
+        <div class="products__list list--three"></div>
       </section>
     </main>
     <footer class="footer">
@@ -120,6 +128,7 @@
                 name="name"
                 id="name"
                 placeholder="Enter your name"
+                required
               />
             </div>
             <textarea
@@ -127,6 +136,7 @@
               name="message"
               id="message"
               placeholder="Enter your message"
+              required
             ></textarea>
             <button class="fieldset__btn" type="submit">Send message</button>
           </fieldset>
@@ -145,5 +155,6 @@
       </div>
     </footer>
   </body>
-  <script type="module" src="./assets/js/set_products.js"></script>
+  <script type="module" src="./assets/js/index.js"></script>
+  <script type="module" src="./assets/js/search.js"></script>
 </html>

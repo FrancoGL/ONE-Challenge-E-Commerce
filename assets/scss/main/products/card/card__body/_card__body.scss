@@ -1,0 +1,7 @@
+@use "./body__title";
+@use "./body__price";
+@use "./body__link";
+
+.card__body {
+  margin: 0.5rem 0;
+}

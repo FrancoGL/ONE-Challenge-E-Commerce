@@ -1,6 +1,6 @@
-@use "general";
-@use "header";
-@use "main";
-@use "footer";
-@use "tablet";
-@use "desktop";
+@use "./settings/config";
+@use "./header/header";
+@use "./main/main";
+@use "./footer/footer";
+@use "./main/loader.scss";
+@use "./main/inline__error";

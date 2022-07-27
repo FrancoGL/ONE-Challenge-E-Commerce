@@ -1,0 +1,23 @@
+@use '../../settings/colors' as colors;
+
+.fieldset__input {
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  background-color: colors.$primary-default-color;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  .input__label {
+    display: block;
+    color: colors.$third-color;
+  }
+
+  .input__element {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+}

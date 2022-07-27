@@ -1,13 +1,17 @@
-@use "variables";
-
-$btn-background: variables.$primary-color;
-$btn-color: variables.$primary-default-color;
+@use "./settings/config";
+@use "./header/header";
+@use "./main/main";
+@use "./footer/footer";
+@use "./main/loader.scss";
+@use "./main/inline__error";
+@use "./navigation";
+@use "./settings/colors" as colors;
 
 .main__products {
   grid-area: main;
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  padding: 2rem;
+  padding: 1rem;
 
   .products__header {
     .header__title {
@@ -20,14 +24,15 @@ $btn-color: variables.$primary-default-color;
       width: 9.375rem;
       padding: 0.75rem 1rem;
       margin-bottom: 1rem;
-      background-color: $btn-background;
-      color: $btn-color;
+      background-color: colors.$primary-color;
+      color: colors.$primary-default-color;
       border: none;
       border-radius: 0.25rem;
     }
   }
 
   .products__list {
+    margin-bottom: 1rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -43,8 +48,8 @@ $btn-color: variables.$primary-default-color;
         }
         .btn__group {
           position: absolute;
-          top: 0.5rem;
-          right: 0.5rem;
+          top: 1rem;
+          right: 0.8rem;
 
           .btn__item {
             margin-right: 1.5rem;

@@ -1,0 +1,12 @@
+.banner__title {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1.375rem;
+}
+
+@media screen and (min-width: 768px) {
+  .banner__title {
+    margin-bottom: 1rem;
+    font-size: 3.25rem;
+  }
+}

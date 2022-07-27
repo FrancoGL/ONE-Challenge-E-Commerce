@@ -1,0 +1,9 @@
+@use './fielset__legend';
+@use './fielset__input';
+@use './fielset__textarea';
+@use './fielset__btn';
+
+.fieldset {
+  display: flex;
+  flex-flow: column nowrap;
+}

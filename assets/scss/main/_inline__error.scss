@@ -1,0 +1,7 @@
+@use "../settings/colors" as colors;
+
+.inline__error {
+  display: block;
+  color: colors.$error-color;
+  text-align: center;
+}

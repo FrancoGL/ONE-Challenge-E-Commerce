@@ -1,0 +1,21 @@
+@use "./footer__links";
+@use "../settings/colors" as colors;
+
+.container {
+  padding: 1.651rem 1rem 1rem 1rem;
+  background-color: colors.$fifth-color;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 4rem;
+  }
+}

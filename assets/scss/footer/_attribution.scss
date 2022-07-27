@@ -1,0 +1,13 @@
+@use '../settings/colors' as colors;
+
+.attribution {
+  padding: 2rem 1rem;
+  font-weight: 500;
+  background-color: colors.$primary-default-color;
+  text-align: center;
+
+  .attribution__link {
+    color: colors.$secondary-default-color;
+    text-decoration: none;
+  }
+}
